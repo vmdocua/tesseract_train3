@@ -1,0 +1,56 @@
+###############################################################
+[Default tesseract output]
+tesseract foo.bar.exp0.tif stdout -l eng --psm 6
+
+“i tlwaoae> ds
+
+###############################################################
+[Train tesseract]
+-------------------
+2) ...
+APPLY_BOXES:
+   Boxes read from boxfile:       6
+   Found 6 good blobs.
+Generated training data for 1 words
+-------------------
+3) ...
+Extracting unicharset from box file foo.bar.exp0.box
+Other case a of A is not in unicharset
+Other case b of B is not in unicharset
+Other case c of C is not in unicharset
+Other case d of D is not in unicharset
+Other case e of E is not in unicharset
+Other case f of F is not in unicharset
+Wrote unicharset file unicharset
+-------------------
+4) ...
+-------------------
+5) ...
+Warning: No shape table file present: shapetable
+Reading foo.bar.exp0.tr ...
+Flat shape table summary: Number of shapes = 6 max unichars = 1 number with multiple unichars = 0
+Warning: no protos/configs for Joined in CreateIntTemplates()
+Warning: no protos/configs for |Broken|0|1 in CreateIntTemplates()
+Done!
+Reading foo.bar.exp0.tr ...
+Clustering ...
+
+Writing normproto ...
+-------------------
+6) ...
+Combining tessdata files
+Output foo.traineddata created successfully.
+Version:5.3.0-17-g3bed
+1:unicharset:size=493, offset=192
+3:inttemp:size=124991, offset=685
+4:pffmtable:size=84, offset=125676
+5:normproto:size=902, offset=125760
+13:shapetable:size=112, offset=126662
+23:version:size=14, offset=126774
+-------------------
+Setup tessdata with foo.traineddata
+###############################################################
+[Trained tesseract output]
+tesseract foo.bar.exp0.tif stdout -l foo --psm 6 --tessdata-dir ./tessdata/
+
+ABCDEF
