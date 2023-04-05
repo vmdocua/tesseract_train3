@@ -52,5 +52,10 @@ echo 'tesseract foo.bar.exp0.tif stdout -l foo --psm 6 --tessdata-dir ./tessdata
 echo ' '
 tesseract foo.bar.exp0.tif stdout -l foo --psm 6 --tessdata-dir ./tessdata/
 
+echo ' '
+echo 'tesseract foo.bar.exp0.tif stdout -l foo --psm 6 --tessdata-dir ./tessdata/ -c hocr_char_boxes=1 hocr'
+echo ' '
+tesseract foo.bar.exp0.tif stdout -l foo --psm 6 --tessdata-dir ./tessdata/ -c hocr_char_boxes=1 hocr
+
 # return back
 cd ../
